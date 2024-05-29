@@ -1,0 +1,37 @@
+
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+     <script src="https://cdn.tailwindcss.com"></script>
+    <title>weather app</title>
+  </head>
+  <body class="h-screen border-red-950 border-2 bg-slate-200">
+
+
+
+    <div id="contenedorBuscador" class="flex justify-center w-full p-2 mt-20">
+    <input type="search" name="" id="city">
+        <button  type="button" value="Enter city" onclick="getWeather()" >Buscar</button  >
+    </div>
+
+    <div id="contenedorClima" class=" grid grid-cols-2 grid-rows-[120px_200px_80px] gap-4 p-4  place-items-center border-4">
+
+       
+    
+    </div>
+
+    <div id="olas" class=" absolute bottom-0 left-0 ">
+        <img src="icons/ola.svg" alt="" srcset="" class="w-screen">
+    </div>
+    
+
+
+
+
+
+
+    <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>
