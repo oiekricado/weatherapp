@@ -34,7 +34,7 @@ let urlvar = "https://api.openweathermap.org/data/2.5/weather?q="+ubicacion+"&ap
   
 
 
-        <div id="viento" class="w-40 h-40 lg:col-start-3 lg:row-start-1 md:col-start-2 md:row-start-2 grid grid-cols-[50px_100px] grid-rows-[50px]">
+        <div id="viento" class="w-40 h-40 lg: lg:col-start-3 lg:row-start-1 md:col-start-2 md:row-start-2 grid grid-cols-[50px_100px] grid-rows-[50px]">
         <img src="icons/wind.png" alt="" srcset="" class="pt-2 pl-2">
         <h2 id="descripcion" class="pt-2 pl-2">Viento</h2>
         <div id="infoViento" class=" ">
