@@ -16,12 +16,12 @@ let urlvar = "https://api.openweathermap.org/data/2.5/weather?q="+ubicacion+"&ap
      let divInfoclima = document.getElementById("contenedorClima");
      divInfoclima.innerHTML = `
 
-     <div id="infLugar" class="h-12  w-full col-span-2 grid grid-cols-2">
-     <h1 id="ciudad" class="text-3xl font-bold w-64">${pronostico.name}`+`,${pronostico.sys.country}</h1>
+     <div id="infLugar" class="h-12 lg:col-start-1 lg:row-start-1 w-full grid">
+     <h1 id="ciudad" class="text-3xl font-bold w-64 text-center">${pronostico.name}`+`,${pronostico.sys.country}</h1>
     </div>
 
 
-    <div id="temperatura" class="w-40 h-40  col-span-1 row-span-1 grid grid-cols-[50px_100px] grid-rows-[50px]">
+    <div id="temperatura" class="w-40 h-40 lg:col-start-2 lg:row-start-1 md:row-start-2 grid grid-cols-[50px_100px] grid-rows-[50px]">
             <img src="${iconUrl}" alt="" srcset="" class=" pt-2 pl-2">
             <h2 id="descripcion" class="pt-4 pl-2">${pronostico.weather[0].main}</h2>
             <h1 id="tempActual" class="text-3xl font-bold pl-2">${pronostico.main.temp}°C</h1>
@@ -34,7 +34,7 @@ let urlvar = "https://api.openweathermap.org/data/2.5/weather?q="+ubicacion+"&ap
   
 
 
-        <div id="viento" class="w-40 h-40 grid grid-cols-[50px_100px] grid-rows-[50px]">
+        <div id="viento" class="w-40 h-40 lg:col-start-3 lg:row-start-1 md:col-start-2 md:row-start-2 grid grid-cols-[50px_100px] grid-rows-[50px]">
         <img src="icons/wind.png" alt="" srcset="" class="pt-2 pl-2">
         <h2 id="descripcion" class="pt-2 pl-2">Viento</h2>
         <div id="infoViento" class=" ">
@@ -43,7 +43,7 @@ let urlvar = "https://api.openweathermap.org/data/2.5/weather?q="+ubicacion+"&ap
 
     </div>
 
-    <div id="presion" class="h-30 w-40 grid grid-cols-[50px_100px] grid-rows-[40px]">
+    <div id="presion" class="h-30 w-40 lg:col-start-4 lg:row-start-1 md:col-start-1 md:row-start-3 grid grid-cols-[50px_100px] grid-rows-[40px]">
             <img src="icons/presion.png" alt="" srcset="" class="pt-2 pl-2">
             <h2 id="descripcion" class="pt-3 pl-2">Presion</h2>
             <div id="infoPresion" class="">
@@ -53,7 +53,7 @@ let urlvar = "https://api.openweathermap.org/data/2.5/weather?q="+ubicacion+"&ap
         </div>
 
 
-        <div id="humedad" class="h-30 w-40 grid grid-cols-[50px_100px] grid-rows-[40px]">
+        <div id="humedad" class="h-30 w-40 grid lg:col-start-5 lg:row-start-1 md:row-start-3 grid-cols-[50px_100px] grid-rows-[40px]">
         <img src="icons/humedad.png" alt="" srcset="" class="pt-2 pl-2">
         <h2 id="descripcion" class="pt-3 ">humedad</h2>
         <div id="infoViento" class="">
