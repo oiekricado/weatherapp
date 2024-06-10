@@ -16,17 +16,17 @@ let urlvar = "https://api.openweathermap.org/data/2.5/weather?q="+ubicacion+"&ap
      let divInfoclima = document.getElementById("contenedorClima");
      divInfoclima.innerHTML = `
 
-     <div id="infLugar" class="lg:h-12 lg:col-start-1 lg:row-start-1 w-full grid">
+     <div id="infLugar" class="lg:h-12 lg:col-start-1 lg:row-start-1 w-subgrid  grid">
      <h1 id="ciudad" class="text-3xl font-bold w-64 text-center">${pronostico.name}`+`,${pronostico.sys.country}</h1>
     </div>
 
 
-    <div id="temperatura" class="w-96 h-96 lg:w-40 lg:h-40 lg:col-start-2 lg:row-start-1 md:row-start-2 grid grid-cols-[50px_100px] grid-rows-[50px]">
-            <img src="${iconUrl}" alt="" srcset="" class=" pt-2 pl-2">
-            <h2 id="descripcion" class="pt-4 pl-2">${pronostico.weather[0].main}</h2>
-            <h1 id="tempActual" class="text-3xl font-bold pl-2">${pronostico.main.temp}°C</h1>
-            <div id="temperaturaPromMin" class="ml-6 text-center  w-8 h-5 grid grid-cols-2">
-                <h2 id="tempMin" class="text-xs w-8 h-4">${pronostico.main.temp_min}°C</h2>
+    <div id="temperatura" class=" w-subgrid h-64 lg:w-40 lg:h-40 lg:col-start-2 lg:row-start-1 md:row-start-1/3 grid grid-cols-3 grid-rows-2 ">
+            <img src="${iconUrl}" alt="" srcset="" class=" h-32 pt-2 pl-2">
+            <h2 id="descripcion" class="pt-4 pl-2 text-6xl col-start-2 ">${pronostico.weather[0].main}</h2>
+            <h1 id="tempActual" class="col-start-1  row-start-2 text-6xl font-bold pl-2">${pronostico.main.temp}°C</h1>
+            <div id="temperaturaPromMin" class=" col-start-3 row-start-2 text-center  w-12 h-8 place-content-center ">
+                <h2 id="tempMin" class="text-xs ">${pronostico.main.temp_min}°C</h2>
             </div>
 
         </div>
