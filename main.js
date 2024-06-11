@@ -16,49 +16,30 @@ let urlvar = "https://api.openweathermap.org/data/2.5/weather?q="+ubicacion+"&ap
      let divInfoclima = document.getElementById("contenedorClima");
      divInfoclima.innerHTML = `
 
-     <div id="infLugar" class="lg:h-12 lg:col-start-1 lg:row-start-1 w-64 ">
-     <h1 id="ciudad" class="text-3xl font-bold w-64 text-center">${pronostico.name}`+`,${pronostico.sys.country}</h1>
-    </div>
-
-
-    <div id="temperatura" class=" w-subgrid h-64 lg:w-40 lg:h-40 lg:col-start-2 lg:row-start-1 md:row-start-1/3 grid grid-cols-3 grid-rows-2 ">
-            <img src="${iconUrl}" alt="" srcset="" class=" h-32 pt-2 pl-2">
-            <h2 id="descripcion" class="pt-4 pl-2 text-6xl col-start-2 ">${pronostico.weather[0].main}</h2>
-            <h1 id="tempActual" class="col-start-1  row-start-2 text-8xl font-bold pl-2">${pronostico.main.temp}°C</h1>
-            
-
+      <div id="temperatura" class=" w-4/5 h-4/5 md:w-2/3 md:h-2/3 lg:w-3/5 lg:h-3/5 xl:w-2/5 xl:h-3/5 2xl:w-1/4 2xl:h-4/5 grid grid-cols-3 grid-rows-7 p-5  ">
+          <h1 id="ciudad" class=" col-start-1 col-span-3 text-3xl font-bold w-64 text-center">${pronostico.name},${pronostico.sys.country}</h1>
+        <img src="${iconUrl} " alt="" srcset="" class=" col-start-1 row-start-2 h-24 pt-2 pl-2">
+        <h2 id="descripcion" class="pt-4 pl-2  text-5xl col-start-2 col-span-2 font-medium ">${pronostico.weather[0].description}</h2>
+        <h1 id="tempActual" class="col-start-1  row-start-3 col-span-2 text-5xl sm:text-5xl md:text-7xl lg:text-7xl xl:text-7xl font-bold pl-2">${pronostico.main.temp}°C</h1>
+        <div id="tempMin" class="grid place-content-center col-start-3 row-start-3 bg-slate-100 h-12 w-20 rounded-xl">
+          <h2 class=" text-2xl font-medium">${pronostico.main.temp_min}°c</h2>
         </div>
-
-  
-
-
-        <div id="viento" class="lg:w-40 lg:h-40 lg: lg:col-start-3 lg:row-start-1 md:col-start-2 md:row-start-2 grid grid-cols-[50px_100px] grid-rows-[50px]">
-        <img src="icons/wind.png" alt="" srcset="" class="pt-2 pl-2">
-        <h2 id="descripcion" class="pt-2 pl-2">Viento</h2>
-        <div id="infoViento" class=" ">
-            <h1 id="tempActual" class="text-3xl font-bold">${pronostico.wind.speed}Km/hr</h1>
+        <div id="vientoCard" class="col-start-1 row-start-4 grid grid-cols-3 grid-rows-2 w-36 mt-10 ">
+        <img src="icons/wind.png" class=" " alt="" srcset="">
+        <h1 id="viento" class=" col-span-2 text-xl ">Viento</h1>
+        <h2 id="descripViento" class="text-4xl font-bold">${pronostico.wind.speed}km/hr</h2>
         </div>
-
-    </div>
-
-    <div id="presion" class="lg:h-30 lg:w-40 lg:col-start-4 lg:row-start-1 md:col-start-1 md:row-start-3 grid grid-cols-[50px_100px] grid-rows-[40px]">
-            <img src="icons/presion.png" alt="" srcset="" class="pt-2 pl-2">
-            <h2 id="descripcion" class="pt-3 pl-2">Presion</h2>
-            <div id="infoPresion" class="">
-                <h1 id="tempActual" class="text-3xl font-bold pl-3 mb-2">${pronostico.main.pressure}</h1>
-            </div>
-
+        <div id="presionCard" class="col-start-3 row-start-4 grid grid-cols-3 grid-rows-2 w-36 mt-10">
+        <img src="icons/presion.png" alt="" srcset="">
+        <h1 id="presion" class="col-span-2 text-xl">Presion</h1>
+        <h2 id="descripPresion" class="text-4xl font-bold">${pronostico.main.pressure}</h2>
         </div>
-
-
-        <div id="humedad" class="lg:h-30 lg:w-40 grid lg:col-start-5 lg:row-start-1 md:row-start-3 grid-cols-[50px_100px] grid-rows-[40px]">
-        <img src="icons/humedad.png" alt="" srcset="" class="pt-2 pl-2">
-        <h2 id="descripcion" class="pt-3 ">humedad</h2>
-        <div id="infoViento" class="">
-            <h1 id="tempActual" class="text-3xl font-bold pl-3 mb-2">${pronostico.main.humidity}%</h1>
+        <div id="humedadCard" class="col-start-1 row-start-5 grid grid-cols-3 grid-rows-2 w-36 mt-10">
+        <img src="icons/humedad.png" alt="" srcset="">
+        <h1 id="humedad" class="col-span-2 text-xl">Humedad</h1>
+        <h2 id="descripHumedad" class="text-4xl font-bold" >${pronostico.main.humidity}%</h2>
         </div>
-
-    </div>
+        
    `;
    });
 
