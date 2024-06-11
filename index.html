@@ -18,13 +18,13 @@
 
 
     
-    <div id="contenedorClima" class=" grid w-full h-full gap-4  place-items-center  grid-rows-subgrid   ">
+    <div id="contenedorClima" class="md:bg-slate-500 lg:bg-slate-600 grid w-full h-full gap-4  place-items-center  grid-rows-subgrid   ">
 
       
 
 
 
-      <div id="temperatura" class=" w-4/5 h-4/5 grid grid-cols-3 grid-rows-7 ">
+      <div id="temperatura" class=" w-4/5 h-4/5 grid grid-cols-3 grid-rows-7 p-5 md:p-16 ">
           <h1 id="ciudad" class=" col-start-1 col-span-3 text-3xl font-bold w-64 text-center">Zamora, Mich,MX</h1>
         <img src="https://openweathermap.org/img/wn/10d.png" alt="" srcset="" class=" col-start-1 row-start-2 h-24 pt-2 pl-2">
         <h2 id="descripcion" class="pt-4 pl-2 text-6xl col-start-2 font-medium ">Lluvia</h2>
@@ -32,18 +32,21 @@
         <div id="tempMin" class="grid place-content-center col-start-3 row-start-3 bg-slate-100 h-12 w-20 rounded-xl">
           <h2 class=" text-2xl font-medium">19°c</h2>
         </div>
-        
-        <img src="icons/wind.png" class="col-start-1 row-start-4 " alt="" srcset="">
-        <h1 id="viento" class="col-start-1 row-start-4">Viento</h1>
-        <h2 id="descripViento">2km/hr</h2>
-        <!--
+        <div id="vientoCard" class="col-start-1 row-start-4 grid grid-cols-3 grid-rows-2 w-36 mt-10 ">
+        <img src="icons/wind.png" class=" " alt="" srcset="">
+        <h1 id="viento" class=" col-span-2 text-xl ">Viento</h1>
+        <h2 id="descripViento" class="text-4xl font-bold">2km/hr</h2>
+        </div>
+        <div id="presionCard" class="col-start-3 row-start-4 grid grid-cols-3 grid-rows-2 w-36 mt-10">
         <img src="icons/presion.png" alt="" srcset="">
-        <h1 id="presion">Presion</h1>
-        <h2 id="descripPresion">1006</h2>
+        <h1 id="presion" class="col-span-2 text-xl">Presion</h1>
+        <h2 id="descripPresion" class="text-4xl font-bold">1006</h2>
+        </div>
+        <div id="humedadCard" class="col-start-1 row-start-5 grid grid-cols-3 grid-rows-2 w-36 mt-10">
         <img src="icons/humedad.png" alt="" srcset="">
-        <h1 id="humedad">Humedad</h1>
-        <h2 id="descripHumedad">45%</h2>
-        -->
+        <h1 id="humedad" class="col-span-2 text-xl">Humedad</h1>
+        <h2 id="descripHumedad" class="text-4xl font-bold" >45%</h2>
+        </div>
         
         
 
