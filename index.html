@@ -7,22 +7,47 @@
      <script src="https://cdn.tailwindcss.com"></script>
     <title>weather app</title>
   </head>
-  <body class="  bg-slate-200">
+  <body class="  ">
 
 
 
     <div id="contenedorBuscador" class="flex justify-center w-full h-auto p-2 mt-20">
-    <input type="search" name="" id="city" class="w-2/3 h-14 text-2xl lg:w-1/3">
-        <button class="h-14 w-20"  type="button" value="Enter city" onclick="getWeather()" >Buscar</button  >
+    <input type="search" name="" placeholder="Enter the city" id="city" class=" pl-2 pr-2 w-2/3 h-14 text-2xl lg:w-1/3">
+        <button class=""  type="button" value="Enter city" onclick="getWeather()" ><img class="w-10 rounded-full " src="icons/search.svg" alt="" srcset=""> </button  >
     </div>
 
-    <div id="contenedorClima" class=" grid w-full h-full gap-4 p-4 place-items-center border-4  grid-rows-subgrid   ">
+
+    
+    <div id="contenedorClima" class=" grid w-full h-full gap-4  place-items-center  grid-rows-subgrid   ">
+
       
-      <div id="temperatura" class=" w-4/5 h-4/5 grid grid-cols-3 grid-rows-2 ">
-        <img src="${iconUrl}" alt="" srcset="" class=" h-32 pt-2 pl-2">
-        <h2 id="descripcion" class="pt-4 pl-2 text-6xl col-start-2 ">Lluvia</h2>
-        <h1 id="tempActual" class="col-start-1  row-start-2 text-8xl font-bold pl-2">33°C</h1>
+
+
+
+      <div id="temperatura" class=" w-4/5 h-4/5 grid grid-cols-3 grid-rows-7 ">
+          <h1 id="ciudad" class=" col-start-1 col-span-3 text-3xl font-bold w-64 text-center">Zamora, Mich,MX</h1>
+        <img src="https://openweathermap.org/img/wn/10d.png" alt="" srcset="" class=" col-start-1 row-start-2 h-24 pt-2 pl-2">
+        <h2 id="descripcion" class="pt-4 pl-2 text-6xl col-start-2 font-medium ">Lluvia</h2>
+        <h1 id="tempActual" class="col-start-1  row-start-3 col-span-2 text-8xl font-bold pl-2">33°C</h1>
+        <div id="tempMin" class="grid place-content-center col-start-3 row-start-3 bg-slate-100 h-12 w-20 rounded-xl">
+          <h2 class=" text-2xl font-medium">19°c</h2>
+        </div>
         
+        <img src="icons/wind.png" class="col-start-1 row-start-4 " alt="" srcset="">
+        <h1 id="viento" class="col-start-1 row-start-4">Viento</h1>
+        <h2 id="descripViento">2km/hr</h2>
+        <!--
+        <img src="icons/presion.png" alt="" srcset="">
+        <h1 id="presion">Presion</h1>
+        <h2 id="descripPresion">1006</h2>
+        <img src="icons/humedad.png" alt="" srcset="">
+        <h1 id="humedad">Humedad</h1>
+        <h2 id="descripHumedad">45%</h2>
+        -->
+        
+        
+
+
 
     </div>
 
