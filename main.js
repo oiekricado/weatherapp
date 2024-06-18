@@ -1,4 +1,4 @@
-console.log("hola")
+
 function getWeather(){
 
   let ubicacion = document.getElementById("city").value;
@@ -9,9 +9,14 @@ let urlvar = "https://api.openweathermap.org/data/2.5/weather?q="+ubicacion+"&ap
  fetch(urlvar)
    .then((data) => data.json())
    .then((pronostico) => {
+
      console.log(pronostico)
      let iconCode = pronostico.weather[0].icon;
      let iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`
+
+      
+      
+      
      console.log(iconUrl)
      let divInfoclima = document.getElementById("contenedorClima");
      divInfoclima.innerHTML = `
@@ -41,6 +46,8 @@ let urlvar = "https://api.openweathermap.org/data/2.5/weather?q="+ubicacion+"&ap
         </div>
         
    `;
+
+
    });
 
 }

@@ -22,7 +22,7 @@ box-shadow:  13px 13px 27px #d9d9d9,
  background-image: url(icons/wave.svg) ;
  background-repeat: no-repeat;
  background-position: bottom;
- background-size:contain;
- 
-
+ background-size:contain; 
+animation-delay: 0s; 
 }
+
