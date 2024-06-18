@@ -1,4 +1,7 @@
-
+* {
+    padding: 0;
+    margin: 0;
+}
 
 
 
@@ -24,5 +27,18 @@ box-shadow:  13px 13px 27px #d9d9d9,
  background-position: bottom;
  background-size:contain; 
 animation-delay: 0s; 
+}
+
+svg {
+    z-index: -1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+width: 100%;
+height: 100%;
+    box-sizing: border-box;
+    display: block;
+    background-color: #746060;
+background-image: linear-gradient(to bottom, rgba(241, 242, 243, 0.86), #ffffff);
 }
 
