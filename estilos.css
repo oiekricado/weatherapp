@@ -22,11 +22,7 @@ box-shadow:  13px 13px 27px #d9d9d9,
 }
 
 #temperatura{
- background-image: url(icons/wave.svg) ;
- background-repeat: no-repeat;
- background-position: bottom;
- background-size:contain; 
-animation-delay: 0s; 
+
 }
 
 svg {
@@ -39,6 +35,6 @@ height: 100%;
     box-sizing: border-box;
     display: block;
     background-color: #746060;
-background-image: linear-gradient(to bottom, rgba(241, 242, 243, 0.86), #ffffff);
+background-image: linear-gradient(to bottom, rgba(255, 255, 255,1), #ffffff);
 }
 
